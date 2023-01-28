@@ -1,0 +1,8 @@
+version: '3'
+services:
+  backend:
+    image: 'tweets_proj'
+    container_name: 'tweets_container'
+    build: .
+    ports:
+      - "8000"

@@ -1,12 +1,15 @@
-FROM python:3.8-slim-buster
+FROM continuumio/miniconda3:latest
 
 WORKDIR /twitter_proj
+
+COPY environment.yml .
+RUN conda env create -f environment.yml
+
+SHELL ["conda", "run", "-n", "twitter_env", "/bin/bash", "-c"]
 
 COPY requirements.txt ./
 RUN pip install -r requirements.txt
 
 COPY . .
 
-ENTRYPOINT [ "python" ]
-
-CMD [ "-m" , "flask", "run", "--host=0.0.0.0"]
+CMD [ "conda", "run", "-n", "twitter_env", "gunicorn", "wsgi:app", "-b", "0.0.0.0:8000"]

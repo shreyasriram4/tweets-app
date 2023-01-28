@@ -1,0 +1,8 @@
+name: twitter_env
+channels:
+   - conda-forge
+dependencies:
+   - python=3.9
+   - anaconda
+   - pip
+   
