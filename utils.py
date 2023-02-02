@@ -3,11 +3,11 @@ import pandas as pd
 
 # Credentials
 
-bearer_token = "AAAAAAAAAAAAAAAAAAAAAAI%2BlQEAAAAA%2BgeWj5yGpBS5fP9Ff%2BqDEfbArxE%3DPsAQJjLuyVbYe9JcZvKEjDQvqVM3MB9vnnf9OHF1hZa4IBsqrV"
-consumer_key = "Zs5ub4BBK52yUODBt2hFNyuN9"
-consumer_secret = "MImM3cvZLv0l0tfzV3rmXuuDRpcpuQDarNanuGmsaFeRDDFFe6"
-access_token = "2286497154-IhmAkE7MSnMhOOkZBjYx0dBndWKDASkx7VGbfro"
-access_token_secret = "kqndVojOr7OLQULbbdnaK4lSjzk0ULpNvQrcucuTP3FS5"
+bearer_token = "xxx"
+consumer_key = "xxx"
+consumer_secret = "xxx"
+access_token = "xxx"
+access_token_secret = "xxx"
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
